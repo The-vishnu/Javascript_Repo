@@ -6,9 +6,17 @@
     <title>Dom Manipulation</title>
 </head>
 <body>
-    <div class="bg-black">
-        <h1 class="heading">Dom manipulation </h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere nulla id nesciunt saepe nisi atque ad rerum velit laudantium error magni consequatur officia mollitia vitae at obcaecati itaque, veritatis debitis.</p>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tusday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
     </div>
 </body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1].innerHtml)
+</script>
 </html>
