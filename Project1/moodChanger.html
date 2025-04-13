@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Changer Box</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="mood-box" id="moodText">I'm feeling... 🧘‍♀️</div>
+    <div class="buttons">
+      <button id="happyBtn">Happy 😊</button>
+      <button id="sadBtn">Sad 😢</button>
+      <button id="angryBtn">Angry 😡</button>
+      <button id="calmBtn">Calm 🌿</button>
+    </div>
+     <!-- RGB Slider Section -->
+     <div class="slider-box">
+        <div class="slider-group">
+          <label for="redval">Red: <span id="redVal" class="value">0</span></label>
+          <input type="range" id="red" min="0" max="255" value="0">
+        </div>
+        <div class="slider-group">
+          <label for="greenval">Green: <span id="greenVal" class="value">0</span></label>
+          <input type="range" id="green" min="0" max="255" value="0">
+        </div>
+        <div class="slider-group">
+          <label for="blueval">Blue: <span id="blueVal" class="value">0</span></label>
+          <input type="range" id="blue" min="0" max="255" value="0">
+        </div>
+  
+        <div class="preview-box" id="colorPreview"></div>
+      </div>
+  </div>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
