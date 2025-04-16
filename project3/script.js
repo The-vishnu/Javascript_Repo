@@ -18,8 +18,7 @@ switchbtn.addEventListener('click', function () {
 
 lineClick.addEventListener('click', function () {
     hamBurger.classList.toggle('show')
-    line1.classList.toggle('rotate')
-    line2.classList.toggle('rotate')
-    line3.classList.toggle('rotate')
+    line1.classList.toggle('rotate1')
+
     
 })
