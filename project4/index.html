@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Practice Button</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f4f8;
+    }
+
+    .text {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .practice-button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .practice-button:hover {
+      background-color: #45a049;
+    }
+    .practice-button.active{
+      animation: pulse 0.3s linear 1;
+    }
+    @keyframes push {
+      50% {
+        transform: scale(0.8);
+      }
+
+
+    }
+
+    @keyframes pulse {
+      25% {
+        transform: scale(0.9);
+      }
+
+      75% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="text">For Practice Only</div>
+    <button class="practice-button">Click Me</button>
+  </div>
+</body>
+<script>
+  const btn = document.querySelector('.practice-button')
+  const text = document.querySelector('.text')
+
+  btn.addEventListener('click', function () {
+
+    btn.classList.add('active')
+    setTimeout(function () {
+      text.textContent = 'button clicked ! '
+    }, 2000)
+  })
+</script>
+
+</html>
