@@ -42,13 +42,13 @@ const getinfo = async function () {
         }
         const data = await responce.json();
         updateUI(data);
+        // console.log(data);
     } catch (error) {
         alert("Failed to fetch data!");
         profileCard.style.display = 'none';
         
     }
     // const data = await responce.json();
-    // console.log(data);
 
     // updateUI(data);
 }
