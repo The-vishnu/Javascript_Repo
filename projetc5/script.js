@@ -12,6 +12,8 @@ switchBtn.addEventListener('change', function () {
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
     }
+
+
 });
 
 
@@ -19,11 +21,12 @@ addBtn.addEventListener('click', function () {
     const inputTask = document.getElementById('taskInput').value.trim();
     if (inputTask === '') {
         alert('Add your activitities');
+        return;
     }
 
     const list = document.createElement('li');
     list.innerHTML =  `<span>${inputTask}</span>
-    <button class="deleteBtn"><i class="fa-solid fa-trash"></button>
+    <button class="deleteBtn"><i class="fa-solid fa-trash"></i></button>
     `;
 
     list.addEventListener('click', function () {
@@ -35,6 +38,5 @@ addBtn.addEventListener('click', function () {
     });
 
     taskList.appendChild(list);
-    taskList.value = '';
-
+    taskList.value.trim() = '';
 });
