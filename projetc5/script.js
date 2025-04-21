@@ -22,21 +22,23 @@ addBtn.addEventListener('click', function () {
     if (inputTask === '') {
         alert('Add your activitities');
         return;
+    } else {
+
+        const list = document.createElement('li');
+        list.innerHTML =  `<span>${inputTask}</span>
+        <button class="deleteBtn"><i class="fa-solid fa-trash"></i></button>
+        `;
+    
+        list.addEventListener('click', function () {
+            list.querySelector('span').classList.toggle('completed')
+        });
+    
+        list.querySelector('.deleteBtn').addEventListener('click', function () {
+            taskList.removeChild(list);
+        });
+    
+        taskList.appendChild(list);
+        document.getElementById('taskInput').value = '';
     }
 
-    const list = document.createElement('li');
-    list.innerHTML =  `<span>${inputTask}</span>
-    <button class="deleteBtn"><i class="fa-solid fa-trash"></i></button>
-    `;
-
-    list.addEventListener('click', function () {
-        list.querySelector('span').classList.toggle('completed')
-    });
-
-    list.querySelector('.deleteBtn').addEventListener('click', function () {
-        taskList.removeChild(list);
-    });
-
-    taskList.appendChild(list);
-    taskList.value.trim() = '';
 });
